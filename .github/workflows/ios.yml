@@ -47,9 +47,9 @@ jobs:
       - name: Notify Jenkins for Deployment
         if: success()
         env:
-          JENKINS_URL: ${{ secrets.JENKINS_URL }}        # = https://jenkinsstg.roaa.tech
-          JENKINS_TOKEN: ${{ secrets.JENKINS_TOKEN }}    # الـ token اللي مفعّله في Jenkins job “IOS-App”
+          JENKINS_URL: ${{ secrets.JENKINS_URL }}
+          JENKINS_TOKEN: ${{ secrets.JENKINS_TOKEN }}
         run: |
-          echo "Triggering Jenkins deployment job for IOS-App..."
+          echo "Triggering Jenkins deployment job IOS-App..."
           curl -X POST "${JENKINS_URL}/job/IOS-App/build?token=${JENKINS_TOKEN}"
 

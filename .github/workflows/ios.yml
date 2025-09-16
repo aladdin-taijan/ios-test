@@ -31,7 +31,13 @@ jobs:
         if: success()
         env:
           JENKINS_URL: ${{ secrets.JENKINS_URL }}
+          JENKINS_USER: ${{ secrets.JENKINS_USER }}
           JENKINS_TOKEN: ${{ secrets.JENKINS_TOKEN }}
         run: |
+          echo "Fetching Jenkins crumb..."
+          CRUMB=$(curl -s -u "$JENKINS_USER:$JENKINS_TOKEN" \
+            "$JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)")
           echo "Triggering Jenkins deployment job IOS-App..."
-          curl -X POST "${JENKINS_URL}/job/IOS-App/build?token=${JENKINS_TOKEN}"
+          curl -X POST "$JENKINS_URL/job/IOS-App/build" \
+            -u "$JENKINS_USER:$JENKINS_TOKEN" \
+            -H "$CRUMB"

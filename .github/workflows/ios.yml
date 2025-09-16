@@ -18,24 +18,15 @@ jobs:
         run: cd MyApp
         shell: bash
 
-      - name: Build
+      - name: Build and Test
         working-directory: MyApp
         run: |
           xcodebuild -project MyApp.xcodeproj \
             -scheme MyApp \
             -sdk iphonesimulator \
             -destination "platform=iOS Simulator,name=iPhone 16,OS=18.5" \
-            build-for-testing
-
-      - name: Run tests
-        working-directory: MyApp
-        run: |
-          xcodebuild -project MyApp.xcodeproj \
-            -scheme MyApp \
-            -sdk iphonesimulator \
-            -destination "platform=iOS Simulator,name=iPhone 16,OS=18.5" \
-            test
-
+            build-for-testing test
+            
       - name: Notify Jenkins for Deployment
         if: success()
         env:

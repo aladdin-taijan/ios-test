@@ -1,0 +1,63 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 54;
+  objects = {
+
+/* Begin PBXBuildFile section */
+    1D60588E0D05DD3D006BFB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */; };
+    1D60588F0D05DD3D006BFB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588C0D05DD3D006BFB54 /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+    1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+    1D60588C0D05DD3D006BFB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+    1D60588B0D05DD3D006BFB54 = {
+      isa = PBXGroup;
+      children = (
+        1D60588D0D05DD3D006BFB54,
+        1D60588C0D05DD3D006BFB54,
+      );
+      path = "";
+      sourceTree = "<group>";
+    };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+    1D60588E0D05DD3E006BFB54 /* MyApp */ = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = 1D6058940D05DD3E006BFB54 /* Build configuration list */;
+      buildPhases = (
+        1D60588F0D05DD3E006BFB54 /* Sources */,
+      );
+      buildRules = ();
+      dependencies = ();
+      name = MyApp;
+      productName = MyApp;
+      productType = "com.apple.product-type.application";
+    };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+    1D6058900D05DD3D006BFB54 /* Project object */ = {
+      isa = PBXProject;
+      attributes = {
+        LastUpgradeCheck = 1600;
+        ORGANIZATIONNAME = "MyCompany";
+      };
+      buildConfigurationList = 1D6058940D05DD3E006BFB54 /* Build configuration list */;
+      compatibilityVersion = "Xcode 12.0";
+      mainGroup = 1D60588B0D05DD3D006BFB54;
+      targets = (
+        1D60588E0D05DD3E006BFB54 /* MyApp */,
+      );
+    };
+/* End PBXProject section */
+
+  };
+  rootObject = 1D6058900D05DD3D006BFB54 /* Project object */;
+}

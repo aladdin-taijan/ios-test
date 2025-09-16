@@ -24,7 +24,7 @@ jobs:
           xcodebuild -project MyApp.xcodeproj \
             -scheme MyApp \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,OS=latest,name=Any iOS Simulator Device' \
+            -destination "platform=iOS Simulator,name=iPhone 16,OS=18.5" \
             build-for-testing
 
       - name: Test
@@ -33,7 +33,7 @@ jobs:
           xcodebuild -project MyApp.xcodeproj \
             -scheme MyApp \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,OS=latest,name=Any iOS Simulator Device' \
+            -destination "platform=iOS Simulator,name=iPhone 16,OS=18.5" \
             test-without-building
 
       - name: Notify Jenkins for Deployment

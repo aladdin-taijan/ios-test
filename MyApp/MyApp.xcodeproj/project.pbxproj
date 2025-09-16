@@ -5,59 +5,137 @@
   objectVersion = 54;
   objects = {
 
-/* Begin PBXBuildFile section */
-    1D60588E0D05DD3D006BFB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */; };
-    1D60588F0D05DD3D006BFB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588C0D05DD3D006BFB54 /* ViewController.swift */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-    1D60588D0D05DD3D006BFB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-    1D60588C0D05DD3D006BFB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+    1D60588C0D05DD3D006BFB54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+    1D60588D0D05DD3D006BFB54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+    1D60588E0D05DD3D006BFB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+    1D60588F0D05DD3D006BFB54 /* MyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
     1D60588B0D05DD3D006BFB54 = {
       isa = PBXGroup;
       children = (
-        1D60588D0D05DD3D006BFB54,
         1D60588C0D05DD3D006BFB54,
+        1D60588D0D05DD3D006BFB54,
+        1D60588E0D05DD3D006BFB54,
+        1D60588F0D05DD3D006BFB54,
       );
       path = "";
       sourceTree = "<group>";
     };
 /* End PBXGroup section */
 
+/* Begin PBXBuildFile section */
+    1D6058900D05DD3D006BFB54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588C0D05DD3D006BFB54; };
+    1D6058910D05DD3D006BFB54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588D0D05DD3D006BFB54; };
+    1D6058920D05DD3D006BFB54 /* MyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D60588F0D05DD3D006BFB54; };
+/* End PBXBuildFile section */
+
 /* Begin PBXNativeTarget section */
-    1D60588E0D05DD3E006BFB54 /* MyApp */ = {
+    1D6058930D05DD3E006BFB54 /* MyApp */ = {
       isa = PBXNativeTarget;
-      buildConfigurationList = 1D6058940D05DD3E006BFB54 /* Build configuration list */;
-      buildPhases = (
-        1D60588F0D05DD3E006BFB54 /* Sources */,
-      );
+      buildConfigurationList = 1D6058940D05DD3E006BFB54;
+      buildPhases = (1D6058950D05DD3E006BFB54 /* Sources */);
       buildRules = ();
       dependencies = ();
       name = MyApp;
       productName = MyApp;
       productType = "com.apple.product-type.application";
     };
+
+    1D6058960D05DD3E006BFB54 /* MyAppTests */ = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = 1D6058970D05DD3E006BFB54;
+      buildPhases = (1D6058980D05DD3E006BFB54 /* Sources */);
+      buildRules = ();
+      dependencies = ();
+      name = MyAppTests;
+      productName = MyAppTests;
+      productType = "com.apple.product-type.bundle.unit-test";
+    };
 /* End PBXNativeTarget section */
 
+/* Begin XCBuildConfiguration section */
+1D6058990D05DD3E006BFB54 /* Debug */ = {
+    isa = XCBuildConfiguration;
+    buildSettings = {
+        PRODUCT_NAME = MyApp;
+        SDKROOT = iphonesimulator;
+        INFOPLIST_FILE = MyApp/Info.plist;
+        SWIFT_VERSION = 5.0;
+    };
+    name = Debug;
+};
+
+1D60589A0D05DD3E006BFB54 /* Release */ = {
+    isa = XCBuildConfiguration;
+    buildSettings = {
+        PRODUCT_NAME = MyApp;
+        SDKROOT = iphonesimulator;
+        INFOPLIST_FILE = MyApp/Info.plist;
+        SWIFT_VERSION = 5.0;
+    };
+    name = Release;
+};
+
+1D60589B0D05DD3E006BFB54 /* Tests Debug */ = {
+    isa = XCBuildConfiguration;
+    buildSettings = {
+        PRODUCT_NAME = MyAppTests;
+        SDKROOT = iphonesimulator;
+        SWIFT_VERSION = 5.0;
+    };
+    name = Debug;
+};
+
+1D60589C0D05DD3E006BFB54 /* Tests Release */ = {
+    isa = XCBuildConfiguration;
+    buildSettings = {
+        PRODUCT_NAME = MyAppTests;
+        SDKROOT = iphonesimulator;
+        SWIFT_VERSION = 5.0;
+    };
+    name = Release;
+};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+1D6058940D05DD3E006BFB54 /* App Build Configurations */ = {
+    isa = XCConfigurationList;
+    buildConfigurations = (
+        1D6058990D05DD3E006BFB54,
+        1D60589A0D05DD3E006BFB54
+    );
+    defaultConfigurationIsVisible = 0;
+    defaultConfigurationName = Debug;
+};
+
+1D6058970D05DD3E006BFB54 /* Tests Build Configurations */ = {
+    isa = XCConfigurationList;
+    buildConfigurations = (
+        1D60589B0D05DD3E006BFB54,
+        1D60589C0D05DD3E006BFB54
+    );
+    defaultConfigurationIsVisible = 0;
+    defaultConfigurationName = Debug;
+};
+/* End XCConfigurationList section */
+
 /* Begin PBXProject section */
-    1D6058900D05DD3D006BFB54 /* Project object */ = {
+    1D60589D0D05DD3D006BFB54 /* Project object */ = {
       isa = PBXProject;
-      attributes = {
-        LastUpgradeCheck = 1600;
-        ORGANIZATIONNAME = "MyCompany";
-      };
-      buildConfigurationList = 1D6058940D05DD3E006BFB54 /* Build configuration list */;
+      attributes = {LastUpgradeCheck = 1600; ORGANIZATIONNAME = "MyCompany";};
+      buildConfigurationList = 1D6058940D05DD3E006BFB54;
       compatibilityVersion = "Xcode 12.0";
       mainGroup = 1D60588B0D05DD3D006BFB54;
       targets = (
-        1D60588E0D05DD3E006BFB54 /* MyApp */,
+        1D6058930D05DD3E006BFB54 /* MyApp */,
+        1D6058960D05DD3E006BFB54 /* MyAppTests */,
       );
     };
 /* End PBXProject section */
 
   };
-  rootObject = 1D6058900D05DD3D006BFB54 /* Project object */;
+  rootObject = 1D60589D0D05DD3D006BFB54;
 }
